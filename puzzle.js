@@ -2,6 +2,7 @@ document.getElementById('wordForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const title = document.getElementById('title').value;
     const words = document.getElementById('words').value.split(',').map(word => word.trim().toUpperCase());
+   
     const { puzzle, positions } = generateWordSearch(words);
     displayPuzzle(puzzle, false, title);
     displayPuzzle(puzzle, true, title, positions);
@@ -9,7 +10,15 @@ document.getElementById('wordForm').addEventListener('submit', function(event) {
   });
   
   document.getElementById('printButton').addEventListener('click', function() {
-    window.print();
+    let printable = document.getElementById("container").innerHTML;
+    let win = window.open(",");
+    win.document.write('<html>');
+    win.document.write('<body');
+    win.document.write(printable);
+    win.document.write('</body></html>');
+    // win.close();
+    win.print();
+    // window.print();
   });
   
   function generateWordSearch(words) {
