@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Search Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Word Search Generator</h1>
+  <form id="wordForm">
+    <label for="title">Enter title:</label><br>
+    <input type="text" id="title" name="title" required><br><br>
+    <label for="words">Enter words (comma-separated):</label><br>
+    <input type="text" id="words" name="words" required><br><br>
+    <button type="submit">Generate Word Search</button>
+  </form>
+  <div id="puzzleContainer"></div>
+  <div id="answerKeyContainer"></div>
+  <button id="printButton" style="display:none;">Print Puzzle</button>
+  <script src="puzzle.js"></script>
+</body>
+</html>
