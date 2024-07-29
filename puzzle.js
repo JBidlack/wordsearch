@@ -106,4 +106,4 @@ document.getElementById('wordForm').addEventListener('submit', function(event) {
     });
     container.appendChild(table);
   }
-  
+   
