@@ -30,3 +30,14 @@ body {
     }
   }
   
+  @media print {
+    td {
+      -webkit-print-color-adjust: exact; /* For Chrome, Safari */
+      print-color-adjust: exact;         /* For Firefox */
+    }
+  
+    .print-button {
+      display: none !important;
+    }
+  }
+  
